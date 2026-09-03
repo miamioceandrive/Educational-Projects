@@ -133,12 +133,12 @@ body {
 .hero-content button {
   align-self: flex-start;
   margin-top: 15px;
-  padding: 16px 34px;
+  padding: 20px 42px;
   border: 0;
   background: #303030;
   color: white;
   font-family: "Inter", sans-serif;
-  font-size: 11px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
