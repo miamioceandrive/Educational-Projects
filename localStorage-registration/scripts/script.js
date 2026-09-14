@@ -28,6 +28,44 @@ const passwordLoginInput = document.querySelector(".passwordLogin");
 const loginButton = document.querySelector(".login");
 const loginMessage = document.querySelector(".loginMessage");
 
+//  ВАЛИДАЦИЯ
+
+function validateName(name) {
+  if (name.length < 2 || name.length > 24) {
+    return false;
+  }
+
+  const onlyLetters = /^[A-Za-zА-Яа-яЁё]+$/;
+  return onlyLetters.test(name);
+}
+
+function validateEmail(email) {
+  if (email.length < 7) {
+    return false;
+  }
+
+  return email.includes("@");
+}
+
+function validatePhone(phone) {
+  if (phone[0] !== "+") {
+    return false;
+  }
+
+  const digits = phone.slice(1);
+
+  if (digits.length < 8 || digits.length > 12) {
+    return false;
+  }
+
+  const onlyDigits = /^[0-9]+$/;
+  return onlyDigits.test(digits);
+}
+
+function validatePassword(password) {
+  return password.length >= 5 && password.length <= 26;
+}
+
 function showMessage(element, text, isError) {
   element.textContent = text;
 
@@ -51,6 +89,43 @@ signupButton.addEventListener("click", function () {
   // проверка на пустые поля
   if (name === "" || phone === "" || email === "" || password === "") {
     showMessage(signupMessage, "Заполните все поля!", true);
+    return;
+  }
+
+  // вадлидация инпутов
+  if (!validateName(name)) {
+    showMessage(
+      signupMessage,
+      "Имя должно содержать от 2 до 24 букв (только буквы)",
+      true,
+    );
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    showMessage(
+      signupMessage,
+      "Email должен содержать символ @ и быть не короче 7 символов",
+      true,
+    );
+    return;
+  }
+
+  if (!validatePhone(phone)) {
+    showMessage(
+      signupMessage,
+      "Телефон должен начинаться с + и содержать от 8 до 12 цифр",
+      true,
+    );
+    return;
+  }
+
+  if (!validatePassword(password)) {
+    showMessage(
+      signupMessage,
+      "Пароль должен содержать от 5 до 26 символов",
+      true,
+    );
     return;
   }
 
