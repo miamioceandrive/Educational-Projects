@@ -1,0 +1,38 @@
+// Поле поиска с иконкой лупы
+
+@use "../abstracts" as *;
+
+.search {
+  position: relative;
+  margin-bottom: 20px;
+
+  &-input {
+    width: 100%;
+    height: 46px;
+    padding: 0 46px 0 18px;
+    border: none;
+    border-radius: $radius-lg;
+    background: $color-input-bg;
+    font: inherit;
+    font-size: 14px;
+    color: $color-text;
+
+    &::placeholder {
+      color: $color-text-muted;
+    }
+
+    &:focus {
+      @include focus-ring(1px);
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: $color-text-muted;
+    pointer-events: none;
+  }
+}

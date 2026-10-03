@@ -1,0 +1,13 @@
+{
+  "name": "todo-app-sass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TO DO App — версия со стилями на Sass",
+  "scripts": {
+    "sass": "sass scss/style.scss css/style.css --style=expanded",
+    "sass:watch": "sass scss/style.scss css/style.css --style=expanded --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}

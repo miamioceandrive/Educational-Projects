@@ -1,0 +1,19 @@
+// День недели и дата
+
+@use "../abstracts" as *;
+
+.header {
+  margin-bottom: 20px;
+
+  &-weekday {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &-date {
+    margin-top: 4px;
+    font-size: 13px;
+    color: $color-text-muted;
+  }
+}

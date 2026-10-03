@@ -1,0 +1,32 @@
+// Цвета
+$color-accent: #7c5cfc;
+$color-accent-soft: #ede8ff;
+$color-accent-tint: #f3f0ff;
+$color-bg: #ffffff;
+$color-page-bg: #d9d9de;
+$color-card: #f4f2f8;
+$color-input-bg: #e6e4ea;
+$color-text: #1f1f1f;
+$color-text-muted: #8a8a8a;
+$color-border: #e2e0e8;
+$color-handle: #c9c7d0;
+$color-overlay: rgba(0, 0, 0, 0.5);
+$color-fab-shadow: rgba(124, 92, 252, 0.35);
+
+// Размеры
+$app-width: 390px;
+$gutter: 20px;
+
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 24px;
+$radius-pill: 999px;
+
+// Шрифт
+$font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
+
+// Анимации
+$transition-fast: 0.15s ease;
+
+$bp-narrow: 430px;
+$z-modal: 10;

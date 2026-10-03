@@ -1,0 +1,39 @@
+// Все / Активные / Завершенные
+
+@use "../abstracts" as *;
+
+.filters {
+  display: flex;
+  margin-bottom: 22px;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+
+  &-tab {
+    @include flex-center(inline-flex);
+    @include button-reset(11px 8px);
+    flex: 1;
+    gap: 6px;
+    font-size: 13px;
+    color: $color-text;
+
+    & + & {
+      border-left: 1px solid $color-border;
+    }
+
+    &-active {
+      background: $color-accent-soft;
+      color: $color-accent;
+      font-weight: 600;
+    }
+
+    &-check {
+      display: none;
+      font-size: 18px;
+
+      .filters-tab-active & {
+        display: inline-block;
+      }
+    }
+  }
+}

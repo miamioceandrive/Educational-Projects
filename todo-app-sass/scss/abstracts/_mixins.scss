@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+@mixin flex-center($display: flex) {
+  display: $display;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  inset: 0;
+}
+
+@mixin invisible-native-input {
+  @include absolute-fill;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@mixin focus-ring($offset: 2px) {
+  outline: 2px solid $color-accent;
+  outline-offset: $offset;
+}
+
+@mixin button-reset($padding: 0) {
+  padding: $padding;
+  border: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+// Медиа
+
+@mixin narrow {
+  @media (max-width: $bp-narrow) {
+    @content;
+  }
+}

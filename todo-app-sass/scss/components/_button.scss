@@ -1,0 +1,27 @@
+// Кнопки Добавить / Отмена
+
+@use "../abstracts" as *;
+
+.btn {
+  flex: 1;
+  height: 44px;
+  border-radius: $radius-pill;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  // Заполненная
+  &-primary {
+    border: none;
+    background: $color-accent;
+    color: #fff;
+  }
+
+  // Контурная
+  &-outline {
+    border: 1.5px solid $color-accent;
+    background: $color-bg;
+    color: $color-accent;
+  }
+}

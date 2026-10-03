@@ -1,0 +1,28 @@
+// Плавающая круглая кнопка (карандаш)
+
+@use "sass:math";
+@use "../abstracts" as *;
+
+.fab {
+  @include flex-center(inline-flex);
+  position: fixed;
+
+  right: calc(50% - #{math.div($app-width, 2)} + #{$gutter});
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: $color-accent-soft;
+  color: $color-accent;
+  box-shadow: 0 6px 18px $color-fab-shadow;
+  cursor: pointer;
+
+  .material-symbols-outlined {
+    font-size: 24px;
+  }
+
+  @include narrow {
+    right: $gutter;
+  }
+}

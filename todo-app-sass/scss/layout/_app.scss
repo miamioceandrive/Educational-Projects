@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.app {
+  position: relative;
+  width: 100%;
+  max-width: $app-width;
+  min-height: 100vh;
+  background: $color-bg;
+  overflow: hidden;
+}
+
+.screen {
+  position: relative;
+  min-height: 100vh;
+  padding: 28px $gutter 24px;
+}
